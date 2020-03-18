@@ -45,3 +45,11 @@ new_obj = obj.drop('c') # 'c' index를 가진 data 삭제한다.
 print("obj = ", obj)
 print("new_obj = ", new_obj)
 print("obj.drop(['d', 'c'] = ", obj.drop(['d', 'c']))
+
+data = pd.DataFrame(np.arange(16).reshape(4,4),
+            index = ['Ohio', 'Colorado', 'Utah', 'New York'],
+            columns = ['one', 'two', 'three', 'four'])
+
+print("\ndata = ", data)
+print("\ndata.drop(['Colorado', 'Ohio']) = ", data.drop(['Colorado', 'Ohio']))
+print("\ndata.drop(['two', 'four'], axis = 'columns') = ", data.drop(['two', 'four'], axis='columns'))
